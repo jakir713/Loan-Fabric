@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Fabric Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="phone-frame" aria-label="Login screen preview">
+        <header class="brand-header">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+          </div>
+          <div class="brand-text">
+            <strong>LoanFabric</strong>
+            <span>Digital</span>
+          </div>
+        </header>
+        <div class="brand-line" aria-hidden="true"></div>
+
+        <section class="login-content" aria-labelledby="login-heading">
+          <h1 id="login-heading">Login</h1>
+
+          <form id="login-form" novalidate>
+            <div class="field-group">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="mobile">Mobile Number</label>
+              <div class="phone-input-row">
+                <span class="country-code">+1</span>
+                <input
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  inputmode="numeric"
+                  pattern="[0-9]{10,15}"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="pin">PIN</label>
+              <div class="pin-input-row">
+                <input
+                  id="pin"
+                  name="pin"
+                  type="password"
+                  placeholder="Enter your PIN"
+                  inputmode="numeric"
+                  minlength="4"
+                  maxlength="6"
+                  pattern="[0-9]{4,6}"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  class="icon-button"
+                  type="button"
+                  id="toggle-pin"
+                  aria-label="Show PIN"
+                  aria-pressed="false"
+                >
+                  👁
+                </button>
+              </div>
+            </div>
+
+            <button class="login-button" type="submit">Log In</button>
+            <a class="forgot-link" href="#">Forgot password?</a>
+            <p id="status-message" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <footer class="register-footer">
+          <span>Don't have an account?</span>
+          <a href="#">Register</a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
